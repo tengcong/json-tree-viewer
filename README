@@ -1,6 +1,6 @@
 A tool to view json tree written in javascript
 dependent on jQuery
 
-base from jsonview
+base on jsonview
 add show json detail
 modify css ...

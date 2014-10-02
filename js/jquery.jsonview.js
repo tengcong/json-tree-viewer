@@ -57,7 +57,7 @@
     }
     markup.push(ele);
 
-    $('#show_json_detail_' + id + '').live('click', function(e){
+    $(document.body).on('click', '#show_json_detail_' + id + '', function(e){
       e.preventDefault();e.stopPropagation();
       
       alert(JSON.stringify(json[k], null, 2));
@@ -65,7 +65,7 @@
   }
 
 	/** folder, un-folder array */
-	$('.list-toggle-button').live('click', function(e){
+	$(document).on('click', '.list-toggle-button', function(e){
 		e.preventDefault();e.stopPropagation();
 		var $this = $(this);
 		if(!$this.data('li')){
@@ -90,7 +90,8 @@
 		}
 	});
 	// only register this once... will work everywhere
-	$('.property-toggle-button').live('click',function(e){
+	$(document).on('click', '.property-toggle-button', function(e){
+		console.log("click!");
 		e.preventDefault();e.stopPropagation();
 		var $this = $(this);
 		// first time acces this element, store relationships
